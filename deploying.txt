@@ -1,0 +1,25 @@
+//DEPLOYING REACT as static content
+it's important to remember that the starting page of the app
+	(examply mysite.com/my-app) loads index.js and is set on the
+	BroswerRouter to load reacct content and the pages.
+	Also the server must always load index.js if it goes to other
+	pages since index.js is the one aware of paths via Routing.
+
+--Commands-
+npm run build to create production files
+
+for firebase (check hosting tab and then Get Started):
+	npm install -g firebase-tools
+	then go to root folder (of the project) and:
+	firebase login //si ya aparece registrado puede haber error
+	//usar entonces: firebase logout
+	//y: firebase login
+
+	firebase init
+	use public directory: build
+	configure as a single-page-app? Yes
+	index.html already exists. Overtwrite? No
+
+	firebase deploy
+
+	now visit the Hosting Url given and see the project online
